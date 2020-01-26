@@ -1,0 +1,11 @@
+
+# ==============================================
+# Persistence object mapping configuration
+# ==============================================
+config.tx_extbase.persistence.classes {
+  Dkd\DkdFuasContacts\Domain\Model\Address {
+    mapping {
+      tableName = tt_address
+    }
+  }
+}

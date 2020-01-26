@@ -1,0 +1,46 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:fuas="http://typo3.org/ns/Dkd/DkdFuas/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="content">
+	<f:if condition="{addresses}">
+		<div class="contacts-list">
+			<f:switch expression="{settings.templateLayout}">
+				<f:case value="1">
+					<div class="row flexed">
+					<fuas:forGroup each="{addresses}" as="addressSet" groupSize="3">
+							<f:for each="{addressSet}" as="address">
+								<div class="col-xs-12 col-md-6 col-lg-4">
+									<f:render partial="ListItem" section="withoutImage" arguments="{_all}"/>
+								</div>
+							</f:for>
+					</fuas:forGroup>
+					</div>
+				</f:case>
+				<f:case value="2">
+					<f:for each="{addresses}" as="address">
+						<f:variable name="oneColumn" value="1" />
+						<f:render partial="ListItem" section="withImage" arguments="{_all}"/>
+					</f:for>
+				</f:case>
+				<f:case value="3">
+					<f:for each="{addresses}" as="address">
+						<f:render partial="ListItem" section="withoutImage" arguments="{_all}"/>
+					</f:for>
+				</f:case>
+				<f:defaultCase>
+					<fuas:forGroup each="{addresses}" as="addressSet" groupSize="2">
+						<div class="row flexed">
+							<f:for each="{addressSet}" as="address">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+									<f:render partial="ListItem" section="withImage" arguments="{_all}"/>
+								</div>
+							</f:for>
+						</div>
+					</fuas:forGroup>
+				</f:defaultCase>
+			</f:switch>
+		</div>
+	</f:if>
+</f:section>
+</html>

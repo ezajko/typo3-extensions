@@ -1,0 +1,51 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:fuas="http://typo3.org/ns/Dkd/DkdFuas/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+
+<f:section name="withoutImage">
+	<div class="contacts-list__contact contacts-list__contact-no-image">
+		<div class="contacts-list__info">
+			<f:render section="info" arguments="{_all}"/>
+		</div>
+	</div>
+</f:section>
+
+<f:section name="withImage">
+	<div class="contacts-list__contact">
+		<div class="row">
+			<div class="hidden-xs {f:if(condition:'{oneColumn}',then:'col-sm-4',else:'col-sm-5')}">
+				<f:link.action pageUid="{settings.detailPid}" title="{address.title} {address.firstName} {address.lastName}" action="detail" pluginName="Detail" arguments="{address: address}">
+					<div class="contacts-list__image-wrapper">
+						<f:if condition="{address.image}">
+							<f:then>
+								<f:for each="{address.image}" as="file">
+									<f:media class="image-embed-item" file="{file}" alt="{file.alternative}" title="{file.title}"/>
+								</f:for>
+							</f:then>
+							<f:else>
+								<f:image maxWidth="375" maxHeight="500" class="contacts-list__image-fallback" src="{settings.addresses.placeholder}" alt="" />
+							</f:else>
+						</f:if>
+					</div>
+				</f:link.action>
+			</div>
+			<div class="col-xs-12 {f:if(condition:'{oneColumn}',then:'col-sm-8',else:'col-sm-7')}">
+				<div class="contacts-list__info">
+					<f:render section="info" arguments="{_all}"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+<f:section name="info">
+	<f:link.action pageUid="{settings.detailPid}" title="{address.title} {address.firstName} {address.lastName}" class="contacts-list__list-name" action="detail" pluginName="Detail" arguments="{address: address}">
+		<f:if condition="{address.title}">
+			<div class="contacts-list__contact-title">{address.title}</div>
+		</f:if>
+		<span class="contacts-list__contact-name">{address.firstName} {address.lastName}</span>
+	</f:link.action>
+
+	<f:render partial="ContactAddressInfo" arguments="{_all}" />
+</f:section>
+</html>

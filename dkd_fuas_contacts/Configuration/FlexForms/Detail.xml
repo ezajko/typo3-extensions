@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <meta type="array">
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <columns>
+            <ROOT type="array">
+                <TCEforms>
+                    <sheetTitle>LLL:EXT:dkd_fuas_contacts/Resources/Private/Language/locallang_db.xlf:configuration</sheetTitle>
+                </TCEforms>
+                <el type="array">
+                    <settings.addressUid>
+                        <TCEforms>
+                            <label>LLL:EXT:dkd_fuas_contacts/Resources/Private/Language/locallang_db.xlf:flexforms.filterUid</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <foreign_table>tt_address</foreign_table>
+                                <foreign_table_where></foreign_table_where>
+                                <size>1</size>
+                                <autoSizeMax>1</autoSizeMax>
+                                <maxitems>1</maxitems>
+                                <allowed>tt_address</allowed>
+                                <wizards>
+                                    <suggest>
+                                        <type>suggest</type>
+                                        <default></default>
+                                    </suggest>
+                                </wizards>
+                            </config>
+                        </TCEforms>
+                    </settings.addressUid>
+                </el>
+            </ROOT>
+        </columns>
+    </sheets>
+</T3DataStructure>

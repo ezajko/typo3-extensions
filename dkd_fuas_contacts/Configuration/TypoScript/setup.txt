@@ -1,0 +1,30 @@
+
+plugin.tx_dkdfuascontacts {
+  view {
+    templateRootPaths.0 = EXT:dkd_fuas_contacts/Resources/Private/Templates/
+    templateRootPaths.1 = {$plugin.tx_dkdfuascontacts.view.templateRootPath}
+    partialRootPaths.0 = EXT:dkd_fuas_contacts/Resources/Private/Partials/
+    partialRootPaths.1 = {$plugin.tx_dkdfuascontacts.view.partialRootPath}
+    layoutRootPaths.0 = EXT:dkd_fuas_contacts/Resources/Private/Layouts/
+    layoutRootPaths.1 = {$plugin.tx_dkdfuascontacts.view.layoutRootPath}
+  }
+  persistence {
+    storagePid = {$plugin.tx_dkdfuascontacts.persistence.storagePid}
+    recursive = 9
+  }
+  features {
+    ignoreAllEnableFieldsInBe = 0
+    requireCHashArgumentForActionArguments = 0
+  }
+  settings {
+    detailPid = {$plugin.tx_dkdfuascontacts.settings.detailPid}
+  }
+}
+
+# Rendering of content elements in detail view
+lib.tt_address.contentElementRendering = RECORDS
+lib.tt_address.contentElementRendering {
+  tables = tt_content
+  source.current = 1
+  dontCheckPid = 1
+}

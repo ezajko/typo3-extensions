@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" product-name="dkd_fuas_contacts">
+		<header/>
+		<body>
+			<trans-unit id="building" xml:space="preserve">
+				<target>Gebäude</target>
+			</trans-unit>
+			<trans-unit id="room" xml:space="preserve">
+				<target>Raum</target>
+			</trans-unit>
+			<trans-unit id="phone" xml:space="preserve">
+				<target>Tel.</target>
+			</trans-unit>
+			<trans-unit id="fax" xml:space="preserve">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="mobile" xml:space="preserve">
+				<target>Mobil</target>
+			</trans-unit>
+			<trans-unit id="quicklinks" xml:space="preserve">
+				<target>Quicklinks</target>
+			</trans-unit>
+			<trans-unit id="downloads" xml:space="preserve">
+				<target>Downloads</target>
+			</trans-unit>
+			<trans-unit id="regular_courses" xml:space="preserve">
+				<target>Regelmäßige Lehrveranstaltungen</target>
+			</trans-unit>
+			<trans-unit id="informations" xml:space="preserve">
+				<target>Informationen</target>
+			</trans-unit>
+			<trans-unit id="speaking_time" xml:space="preserve">
+				<target>Sprechzeiten</target>
+			</trans-unit>
+			<trans-unit id="languages" xml:space="preserve">
+				<target>Sprachkenntnisse</target>
+			</trans-unit>
+			<trans-unit id="download" xml:space="preserve">
+				<target>Download</target>
+			</trans-unit>
+			<trans-unit id="back_to_overview" xml:space="preserve">
+				<target>Zurück zur Übersicht</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.back_to_previous_page" xml:space="preserve">
+				<target>Zurück zu der vorherigen Seite</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.call" xml:space="preserve">
+				<target>Anrufen unter der Nummer</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.linkedin_profile" xml:space="preserve">
+				<target>Linkedin Profil</target>
+			</trans-unit>
+			<trans-unit id="open_linkedin_profile" xml:space="preserve">
+				<target>Linkedin Profil öffnen</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.xing_profile" xml:space="preserve">
+				<target>Xing Profil</target>
+			</trans-unit>
+			<trans-unit id="open_xing_profile" xml:space="preserve">
+				<target>Xing Profil öffnen</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.skype_profile" xml:space="preserve">
+				<target>Skype Chat</target>
+			</trans-unit>
+			<trans-unit id="open_skype_profile" xml:space="preserve">
+				<target>Skype Chat öffnen</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.twitter_profile" xml:space="preserve">
+				<target>Twitter Profil</target>
+			</trans-unit>
+			<trans-unit id="open_twitter_profile" xml:space="preserve">
+				<target>Twitter Profil öffnen</target>
+			</trans-unit>
+			<trans-unit id="ariaLabel.facebook_profile" xml:space="preserve">
+				<target>Facebook Profil</target>
+			</trans-unit>
+			<trans-unit id="open_facebook_profile" xml:space="preserve">
+				<target>Facebook Profil öffnen</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

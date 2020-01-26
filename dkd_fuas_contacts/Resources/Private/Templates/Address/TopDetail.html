@@ -1,0 +1,43 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:fuas="http://typo3.org/ns/Dkd/DkdFuas/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+<f:section name="content">
+	<div class="contact-detail-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-md-4">
+					<f:for each="{address.image}" as="file">
+						<f:media class="contact-detail-top__photo image-embed-item" file="{file}" alt="{file.alternative}" title="{file.title}"/>
+					</f:for>
+				</div>
+				<div class="col-sm-8 col-md-8 contact-detail-top__info">
+					<h1>
+						<div class="contact-title">
+							{address.title -> f:format.html() -> f:format.stripTags()}
+						</div>
+						<div class="contact-name">
+							{address.firstName -> f:format.html() -> f:format.stripTags()} {address.lastName -> f:format.html() -> f:format.stripTags()}
+						</div>
+					</h1>
+					<f:if condition="{address.position}">
+						<div class="position">
+							{address.position -> f:format.html() -> f:format.stripTags()}
+						</div>
+					</f:if>
+					<f:if condition="{address.fieldOfExpertise}">
+						<div class="field-of-expertise">
+							{address.fieldOfExpertise -> f:format.html() -> f:format.stripTags()}
+						</div>
+					</f:if>
+					<f:for each="{address.faculty}" as="faculty">
+						{faculty.title -> f:format.html() -> f:format.stripTags()}
+					</f:for>
+					<f:render partial="ContactAddressInfo" arguments="{_all}" />
+				</div>
+			</div>
+		</div>
+	</div>
+</f:section>
+</html>

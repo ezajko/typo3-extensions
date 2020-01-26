@@ -1,0 +1,67 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:fuas="http://typo3.org/ns/Dkd/DkdFuas/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+
+
+	<f:if condition="{address.building} && {address.room}">
+		<div>
+			<f:translate key="building"/>
+			{address.building -> f:format.html() -> f:format.stripTags()},
+			<f:translate key="room"/>
+			{address.room -> f:format.html() -> f:format.stripTags()}
+		</div>
+	</f:if>
+	<f:if condition="{address.npPhone} != 1 && {address.phone}">
+		<div>
+			<f:translate key="phone"/>
+			: <a href="tel:{fuas:phoneLinkFormat(phoneNumber: '{address.phone}')}" title="{f:translate(key: 'ariaLabel.call')} {address.phone}">{address.phone}</a>
+			{address.captionPhone}
+		</div>
+	</f:if>
+	<f:if condition="{address.npPhone2} != 1 && {address.phone2}">
+		<div>
+			<f:translate key="phone"/>
+			: <a href="tel:{fuas:phoneLinkFormat(phoneNumber: '{address.phone2}')}" title="{f:translate(key: 'ariaLabel.call')} {address.phone2}">{address.phone2}</a>
+			{address.captionPhone2}
+		</div>
+	</f:if>
+	<f:if condition="{address.npPhone3} != 1 && {address.phone3}">
+		<div>
+			<f:translate key="phone"/>
+			: <a href="tel:{fuas:phoneLinkFormat(phoneNumber: '{address.phone3}')}" title="{f:translate(key: 'ariaLabel.call')} {address.phone3}">{address.phone3}</a>
+			{address.captionPhone3}
+		</div>
+	</f:if>
+	<f:if condition="{address.npMobile} != 1 && {address.mobile}">
+		<div>
+			<f:translate key="phone"/>
+			: <a href="tel:{fuas:phoneLinkFormat(phoneNumber: '{address.mobile}')}" title="{f:translate(key: 'ariaLabel.call')} {address.mobile}">{address.mobile}</a>
+			{address.captionMobile}
+		</div>
+	</f:if>
+	<f:if condition="{address.fax}">
+		<div>
+			<f:translate key="fax"/>
+			: {address.fax}
+		</div>
+	</f:if>
+	<f:if condition="{address.npEmail} != 1 && {address.email}">
+		<div>
+			<f:link.email email="{address.email}" title="{f:translate(key: 'send_email_to')} {address.email}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {address.email}</f:link.email>
+			{address.captionEmail}
+		</div>
+	</f:if>
+	<f:if condition="{address.npEmail2} != 1 && {address.email2}">
+		<div>
+			<f:link.email email="{address.email2}" title="{f:translate(key: 'send_email_to')} {address.email2}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {address.email2}</f:link.email>
+			{address.captionEmail2}
+		</div>
+	</f:if>
+	<f:if condition="{address.npEmail3} != 1 && {address.email3}">
+		<div>
+			<f:link.email email="{address.email3}" title="{f:translate(key: 'send_email_to')} {address.email3}"><i class="fa fa-envelope-o" aria-hidden="true"></i> {address.email3}</f:link.email>
+			{address.captionEmail3}
+		</div>
+	</f:if>
+
+</html>

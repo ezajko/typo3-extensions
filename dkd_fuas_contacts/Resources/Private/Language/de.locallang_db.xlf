@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="de" datatype="plaintext" original="messages" product-name="dkd_fuas_contacts">
+		<header/>
+		<body>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_contactfunction" xml:space="preserve">
+				<target>Funktion</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_contactfunction.title" xml:space="preserve">
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link" xml:space="preserve">
+				<target>Neues Link-Element</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.title" xml:space="preserve">
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.description" xml:space="preserve">
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.uri" xml:space="preserve">
+				<target>URL</target>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.uri.placeholder" xml:space="preserve">
+				<target>www.domain.org</target>
+			</trans-unit>
+			<trans-unit id="tt_adress.quicklinks" xml:space="preserve">
+				<target>Links</target>
+			</trans-unit>
+			<trans-unit id="tt_address.additional" xml:space="preserve">
+				<target>Zusatzinformationen</target>
+			</trans-unit>
+			<trans-unit id="downloads.add" xml:space="preserve">
+				<target>Download-Datei hinzufügen</target>
+			</trans-unit>
+			<trans-unit id="tt_address.faculty" xml:space="preserve">
+				<target>Organisationseinheit</target>
+			</trans-unit>
+			<trans-unit id="tt_address.field_of_expertise" xml:space="preserve">
+				<target>Fachgebiet</target>
+			</trans-unit>
+			<trans-unit id="tt_address.phone2" xml:space="preserve">
+				<target>Telefon 2</target>
+			</trans-unit>
+			<trans-unit id="tt_address.phone3" xml:space="preserve">
+				<target>Telefon 3</target>
+			</trans-unit>
+			<trans-unit id="tt_address.email2" xml:space="preserve">
+				<target>E-Mail 2</target>
+			</trans-unit>
+			<trans-unit id="tt_address.email3" xml:space="preserve">
+				<target>E-Mail 3</target>
+			</trans-unit>
+			<trans-unit id="tt_address.languages" xml:space="preserve">
+				<target>Sprachkenntnisse</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone2" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone3" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email2" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email3" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.np_mobile" xml:space="preserve">
+				<target>nicht öffentlich</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone2" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone3" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email2" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email3" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_mobile" xml:space="preserve">
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="tt_address.speaking_time" xml:space="preserve">
+				<target>Sprechzeiten</target>
+			</trans-unit>
+			<trans-unit id="tt_address.regular_courses" xml:space="preserve">
+				<target>Regelmäßige Lehrveranstaltungen</target>
+			</trans-unit>
+			<trans-unit id="tt_address.quicklinks" xml:space="preserve">
+				<target>Quicklinks</target>
+			</trans-unit>
+			<trans-unit id="tt_address.downloads" xml:space="preserve">
+				<target>Downloads</target>
+			</trans-unit>
+			<trans-unit id="tab.content_elements" xml:space="preserve">
+				<target>Inhalt-Elemente</target>
+			</trans-unit>
+			<trans-unit id="tt_address.content_elements" xml:space="preserve">
+				<target>Inhalt-Elemente</target>
+			</trans-unit>
+			<trans-unit id="tt_address.contactfunction" xml:space="preserve">
+				<target>Funktion</target>
+			</trans-unit>
+			<trans-unit id="flexforms.filterUids" xml:space="preserve">
+				<target>Einzelauswahl für Ansprechpartner</target>
+			</trans-unit>
+			<trans-unit id="flexforms.filterCategories" xml:space="preserve">
+				<target>Kategorieauswahl für Ansprechpartner</target>
+			</trans-unit>
+			<trans-unit id="flexforms.filterUid" xml:space="preserve">
+				<target>Ansprechpartner anzeigen</target>
+			</trans-unit>
+			<trans-unit id="tt_address.xing" xml:space="preserve">
+				<target>Xing:</target>
+			</trans-unit>
+			<trans-unit id="tt_address.position" xml:space="preserve">
+				<target>Sondertätigkeit an der Hochschule:</target>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout" xml:space="preserve">
+				<target>Template Layout</target>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.0" xml:space="preserve">
+				<target>2 Spalten mit Bild</target>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.1" xml:space="preserve">
+				<target>3 Spalten ohne Bild</target>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.2" xml:space="preserve">
+				<target>1 Spalte mit Bild</target>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.3" xml:space="preserve">
+				<target>1 Spalte ohne Bild</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,18 @@
+
+plugin.tx_dkdfuascontacts {
+  view {
+    # cat=plugin.tx_dkdfuascontacts/file; type=string; label=Path to template root (FE)
+    templateRootPath = EXT:dkd_fuas_contacts/Resources/Private/Templates/
+    # cat=plugin.tx_dkdfuascontacts/file; type=string; label=Path to template partials (FE)
+    partialRootPath = EXT:dkd_fuas_contacts/Resources/Private/Partials/
+    # cat=plugin.tx_dkdfuascontacts/file; type=string; label=Path to template layouts (FE)
+    layoutRootPath = EXT:dkd_fuas_contacts/Resources/Private/Layouts/
+  }
+  persistence {
+    # cat=plugin.tx_dkdfuascontacts//a; type=string; label=Default storage PID
+    storagePid =
+  }
+  settings {
+    detailPid =
+  }
+}

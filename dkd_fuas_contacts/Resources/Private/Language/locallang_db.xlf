@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="dkd_fuas_contacts">
+		<header/>
+		<body>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_contactfunction" xml:space="preserve">
+				<source>Function</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_contactfunction.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link" xml:space="preserve">
+				<source>News Link Element</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.title" xml:space="preserve">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.description" xml:space="preserve">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.uri" xml:space="preserve">
+				<source>URL</source>
+			</trans-unit>
+			<trans-unit id="tx_dkdfuascontacts_domain_model_link.uri.placeholder" xml:space="preserve">
+				<source>www.domain.org</source>
+			</trans-unit>
+			<trans-unit id="tt_adress.quicklinks" xml:space="preserve">
+				<source>Related Links</source>
+			</trans-unit>
+			<trans-unit id="tt_address.additional" xml:space="preserve">
+				<source>Additional</source>
+			</trans-unit>
+			<trans-unit id="downloads.add" xml:space="preserve">
+				<source>Add download</source>
+			</trans-unit>
+			<trans-unit id="tt_address.faculty" xml:space="preserve">
+				<source>Organisational unit</source>
+			</trans-unit>
+			<trans-unit id="tt_address.field_of_expertise" xml:space="preserve">
+				<source>Field of expertise</source>
+			</trans-unit>
+			<trans-unit id="tt_address.phone2" xml:space="preserve">
+				<source>Phone 2</source>
+			</trans-unit>
+			<trans-unit id="tt_address.phone3" xml:space="preserve">
+				<source>Phone 3</source>
+			</trans-unit>
+			<trans-unit id="tt_address.email2" xml:space="preserve">
+				<source>Email 2</source>
+			</trans-unit>
+			<trans-unit id="tt_address.email3" xml:space="preserve">
+				<source>Email 3</source>
+			</trans-unit>
+			<trans-unit id="tt_address.languages" xml:space="preserve">
+				<source>Languages</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone2" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_phone3" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email2" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_email3" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.np_mobile" xml:space="preserve">
+				<source>not public</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone2" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_phone3" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email2" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_email3" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.caption_mobile" xml:space="preserve">
+				<source>note</source>
+			</trans-unit>
+			<trans-unit id="tt_address.speaking_time" xml:space="preserve">
+				<source>Speaking time</source>
+			</trans-unit>
+			<trans-unit id="tt_address.regular_courses" xml:space="preserve">
+				<source>Regular courses</source>
+			</trans-unit>
+			<trans-unit id="tt_address.quicklinks" xml:space="preserve">
+				<source>Quicklinks</source>
+			</trans-unit>
+			<trans-unit id="tt_address.downloads" xml:space="preserve">
+				<source>Downloads</source>
+			</trans-unit>
+			<trans-unit id="tab.content_elements" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="tt_address.content_elements" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="tt_address.contactfunction" xml:space="preserve">
+				<source>Function</source>
+			</trans-unit>
+			<trans-unit id="flexforms.filterUids" xml:space="preserve">
+				<source>Single selection of addresses</source>
+			</trans-unit>
+			<trans-unit id="flexforms.filterCategories" xml:space="preserve">
+				<source>Category selection for addresses</source>
+			</trans-unit>
+			<trans-unit id="flexforms.filterUid" xml:space="preserve">
+				<source>Show single address</source>
+			</trans-unit>
+			<trans-unit id="tt_address.xing" xml:space="preserve">
+				<source>Xing:</source>
+			</trans-unit>
+			<trans-unit id="tt_address.position" xml:space="preserve">
+				<source>Function in university:</source>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout" xml:space="preserve">
+				<source>Template Layout</source>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.0" xml:space="preserve">
+				<source>2 columns with image</source>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.1" xml:space="preserve">
+				<source>3 columns without image</source>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.2" xml:space="preserve">
+				<source>1 column with image</source>
+			</trans-unit>
+			<trans-unit id="flexforms.templateLayout.3" xml:space="preserve">
+				<source>1 column without image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,133 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+			xmlns:fuas="http://typo3.org/ns/Dkd/DkdFuas/ViewHelpers"
+			data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="content">
+	<div class="contact-detail">
+		<div class="row">
+			<f:if condition="{address.speakingTime} || {address.languages} || {address.quicklinks -> f:count()} || {address.downloads -> f:count()} || {address.www} || {address.skype} || {address.twitter} || {address.facebook} || {address.linkedin}">
+				<div class="col-md-4">
+					<div class="contact-detail__col1-inner">
+						<f:if condition="{address.speakingTime}">
+							<h2>
+								<f:translate key="speaking_time"/>
+							</h2>
+							<f:format.html>{address.speakingTime}</f:format.html>
+						</f:if>
+
+						<f:if condition="{address.languages}">
+							<h2>
+								<f:translate key="languages"/>
+							</h2>
+							<f:format.html>{address.languages}</f:format.html>
+						</f:if>
+
+						<f:if condition="{address.quicklinks}">
+							<h2>
+								<f:translate key="quicklinks"/>
+							</h2>
+							<f:for each="{address.quicklinks}" as="quicklink">
+								<div class="contact-detail__quicklink">
+									<f:link.typolink parameter="{quicklink.uri}" title="{quicklink.title}" target="{n:targetLink(link:quicklink.uri)}" >
+										<f:if condition="{fuas:condition.string.contains(haystack:quicklink.uri, needle:'t3://page')} || {fuas:condition.string.contains(haystack:quicklink.uri, needle:'mailto:')} || {fuas:condition.string.contains(haystack:quicklink.uri, needle:'t3://file')}">
+											<f:then>
+												<f:if condition="{fuas:condition.string.contains(haystack:quicklink.uri, needle:'mailto:')}">
+													<span class="fa fa-envelope" aria-hidden="true"></span>
+												</f:if>
+												<f:if condition="{fuas:condition.string.contains(haystack:quicklink.uri, needle:'t3://file')}">
+													<span class="fa fa-download" aria-hidden="true"></span>
+												</f:if>
+											</f:then>
+											<f:else>
+												<span class="fa fa-external-link" aria-hidden="true"></span>
+											</f:else>
+										</f:if>
+										{f:if(condition: quicklink.title, then: quicklink.title, else: '{quicklink.uri -> fuas:getLinkText()}')}
+									</f:link.typolink>
+									<f:if condition="{quicklink.description}"><div>{quicklink.description}</div></f:if>
+								</div>
+							</f:for>
+						</f:if>
+
+						<f:if condition="{address.downloads}">
+							<h2>
+								<f:translate key="downloads"/>
+							</h2>
+							<f:for each="{address.downloads}" as="download">
+								<div class="downloads-files-link">
+									<a href="{download.originalResource.publicUrl -> f:format.htmlspecialchars()}" aria-label="{f:translate(key:'download')} {f:if(condition:download.originalResource.title, then:download.originalResource.title,else:download.originalResource.name)}" target="_blank">
+										<span class="fa fa-download" aria-hidden="true"></span> {f:if(condition:download.originalResource.title, then:download.originalResource.title,else:download.originalResource.name)}
+									</a>
+								</div>
+							</f:for>
+						</f:if>
+
+						<f:if condition="{address.www}">
+							<div class="contact-detail__website">
+								<f:format.html>
+									<f:link.typolink parameter="{address.www}"><span class="fa fa-external-link" aria-hidden="true"></span> {address.www -> fuas:getLinkText()}</f:link.typolink>
+								</f:format.html>
+							</div>
+						</f:if>
+
+						<f:if condition="{address.skype} || {address.twitter} || {address.facebook} || {address.linkedin} || {address.xing}">
+							<div class="contact-detail__social-links">
+								<f:if condition="{address.skype}">
+									<f:link.external uri="skype:{address.skype}?chat" target="_blank" title="{f:translate(key:'open_skype_profile')}" additionalAttributes="{aria-label:'{f:translate(key: \'ariaLabel.skype_profile\')}'}">
+										<span class="fa fa-skype" aria-hidden="true"></span>
+									</f:link.external>
+								</f:if>
+								<f:if condition="{address.twitter}">
+									<f:link.external uri="https://twitter.com/{address.twitter}" target="_blank" title="{f:translate(key:'open_twitter_profile')}" additionalAttributes="{aria-label:'{f:translate(key: \'ariaLabel.twitter_profile\')}'}">
+										<span class="fa fa-twitter" aria-hidden="true"></span>
+									</f:link.external>
+								</f:if>
+								<f:if condition="{address.facebook}">
+									<f:link.external uri="https://facebook.com/{address.facebook}" target="_blank" title="{f:translate(key:'open_facebook_profile')}" additionalAttributes="{aria-label:'{f:translate(key: \'ariaLabel.facebook_profile\')}'}">
+										<span class="fa fa-facebook" aria-hidden="true"></span>
+									</f:link.external>
+								</f:if>
+								<f:if condition="{address.linkedin}">
+									<f:link.external uri="https://www.linkedin.com/in/{address.linkedin}" target="_blank" title="{f:translate(key:'open_linkedin_profile')}" additionalAttributes="{aria-label:'{f:translate(key: \'ariaLabel.linkedin_profile\')}'}">
+										<span class="fa fa-linkedin" aria-hidden="true"></span>
+									</f:link.external>
+								</f:if>
+								<f:if condition="{address.xing}">
+									<f:link.external uri="https://www.xing.com/profile/{address.xing}" target="_blank" title="{f:translate(key:'open_xing_profile')}" additionalAttributes="{aria-label:'{f:translate(key: \'ariaLabel.xing_profile\')}'}">
+										<span class="fa fa-xing" aria-hidden="true"></span>
+									</f:link.external>
+								</f:if>
+							</div>
+						</f:if>
+					</div>
+				</div>
+			</f:if>
+
+			<f:if condition="{address.regularCourses} || {address.description} || {address.contentElements}">
+				<div class="col-md-8">
+					<div class="contact-detail__col2-inner">
+						<f:if condition="{address.regularCourses}">
+							<h2>
+								<f:translate key="regular_courses"/>
+							</h2>
+							<f:format.html>{address.regularCourses}</f:format.html>
+						</f:if>
+
+						<f:if condition="{address.description}">
+							<h2>
+								<f:translate key="informations"/>
+							</h2>
+							<f:format.html>{address.description}</f:format.html>
+						</f:if>
+
+						<f:if condition="{address.contentElements}">
+							<f:cObject typoscriptObjectPath="lib.tt_address.contentElementRendering">{address.contentElementIdList}</f:cObject>
+						</f:if>
+					</div>
+				</div>
+			</f:if>
+		</div>
+		<a href="javascript:history.back()" class="btn btn-primary" title="{f:translate(key:'back_to_overview')}" aria-label="{f:translate(key:'ariaLabel.back_to_previous_page')}"><i class="fa fa-chevron-left"></i> <f:translate key="back_to_overview"/></a>
+	</div>
+</f:section>
+</html>
