@@ -1,0 +1,104 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="tx-bsbh-events__form">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="title">
+                    <f:translate key="tx_bsbhevents_domain_model_event.title"/>
+                </label><br/>
+                <f:form.textfield property="title" required="true" class="form-control"/>
+            </div>
+        </div>
+    </div>
+    <div class="radio" title="{f:translate(key: 'tx_bsbhevents_domain_model_event.is_repeating_event')}">
+        <label for="tx_bsbhevents-event-is-not-repeating">
+            <f:form.radio property="isRepeatingEvent" additionalAttributes="{required: 'true'}"
+                          name="is-repeating-event" value="0" id="tx_bsbhevents-event-is-not-repeating"/>
+        <f:translate key="tx_bsbhevents_domain_model_event.isRepeatingEvent_false"/>
+        </label>
+
+    </div>
+    <div class="radio">
+        <label for="tx_bsbhevents-event-is-repeating">
+            <f:form.radio property="isRepeatingEvent" additionalAttributes="{required: 'true'}"
+                          name="is-repeating-event" value="1" id="tx_bsbhevents-event-is-repeating"/>
+            <f:translate key="tx_bsbhevents_domain_model_event.isRepeatingEvent_true"/>
+        </label>
+    </div>
+    <div data-onetime-relevant="true">
+        <div class="form-group">
+            <label for="tx_bsbhevents-event-is-full-day">
+                <f:form.checkbox id="tx_bsbhevents-event-is-full-day" property="isFullDay" value="1"/>
+                <f:translate key="tx_bsbhevents_domain_model_event.is_full_day"/>
+            </label>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="eventStartDate">
+                        <f:translate key="tx_bsbhevents_domain_model_event.event_startDate"/>
+                    </label>
+                    <f:form.textfield id="eventStartDate" type="date" property="eventStartDate" class="form-control"
+                                      value="{event.eventStart->f:format.date(format: 'Y-m-d')}"
+                                      additionalAttributes="{data-onetime-relevant: true, data-timestamp: '{event.eventStart->f:format.date(format:\'U\')}', required: 'true'}"/>
+                </div>
+                <div class="col-sm-3">
+                    <label class="time-label" for="eventStartTime">
+                        <f:translate key="tx_bsbhevents_domain_model_event.event_startTime"/>
+                    </label>
+                    <f:form.textfield id="eventStartTime" type="time" property="eventStartTime" class="form-control"
+                                      value="{event.eventStart->f:format.date(format: 'H:i')}"
+                                      additionalAttributes="{data-onetime-relevant: true, data-timestamp: '{event.eventStart->f:format.date(format:\'U\')}', required: 'true'}"/>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-3">
+                    <label for="eventEnd">
+                        <f:translate key="tx_bsbhevents_domain_model_event.event_endDate"/>
+                    </label>
+                    <f:form.textfield id="eventEnd" type="date" property="eventEndDate" class="form-control"
+                                      value="{event.eventEnd->f:format.date(format: 'Y-m-d')}"
+                                      additionalAttributes="{data-onetime-relevant: true, data-timestamp: '{event.eventEnd->f:format.date(format:\'U\')}'}"/>
+                </div>
+                <div class="col-sm-3">
+                    <label class="time-label" for="eventEndTime">
+                        <f:translate key="tx_bsbhevents_domain_model_event.event_endTime"/>
+                    </label>
+                    <f:form.textfield id="eventEndTime" type="time" property="eventEndTime" class="form-control"
+                                      value="{event.eventEnd->f:format.date(format: 'H:i')}"
+                                      additionalAttributes="{data-onetime-relevant: true, data-timestamp: '{event.eventEnd->f:format.date(format:\'U\')}'}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" data-recurring-relevant="true">
+        <label for="recurrenceRule">
+            <f:translate key="tx_bsbhevents_domain_model_event.recurrence_rule"/>
+        </label>
+        <f:form.textfield id="recurrenceRule" class="form-control" property="recurrenceRule"
+                          additionalAttributes="{data-recurring-relevant: true, required: 'true'}"/>
+    </div>
+    <div class="form-group">
+        <label for="content">
+            <f:translate key="tx_bsbhevents_domain_model_event.content"/>
+        </label>
+        <p><f:translate key="tx_bsbhevents_markdown_supported"/></p>
+        <f:form.textarea id="content" class="form-control markdown-input-area"
+                         additionalAttributes="{required: 'true', data-markdown: true}" property="content"/>
+    </div>
+    <div class="form-group">
+        <button type="button" class="markdown-preview-button btn btn-secondary" aria-controls="markdown-preview">
+            <f:translate key="tx_bsbhevents_markdown_preview"/>
+        </button>
+        <div class="markdown-preview" id="markdown-preview" aria-live="polite"></div>
+    </div>
+    <div class="form-group">
+        <label for="location">
+            <f:translate key="tx_bsbhevents_domain_model_event.location"/>
+        </label>
+        <f:form.textarea id="location" class="form-control" additionalAttributes="{required: 'true'}" property="location"/>
+    </div>
+</div>
+</html>

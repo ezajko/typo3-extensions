@@ -1,0 +1,131 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:events="http://typo3.org/ns/Dkd/BsbhEvents/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+This Template shows the LIST view for Events
+
+<f:section name="main">
+
+    <div class="tx-bsbh-events">
+
+            <h1><f:translate key="tx_bsbhevents_events"/> -
+                <f:translate key="{f:if(condition: showing-one-time-events, then: 'tx_bsbhevents_onetime_events', else: 'tx_bsbhevents_recurring_events')}"/>
+            </h1>
+        <div class="tx-bsbh-events__type-selector">
+            <f:link.action action="list"
+                           class="btn btn-primary {f:if(condition: showing-one-time-events, then: 'disabled')}"
+                           arguments="{event-type: 'one-time'}"><f:translate key="tx_bsbhevents_onetime_events"/>
+            </f:link.action>
+            <f:link.action action="list"
+                           class="btn btn-primary {f:if(condition: showing-recurring-events, then: 'disabled')}"
+                           arguments="{event-type: 'recurring'}"><f:translate key="tx_bsbhevents_recurring_events"/>
+            </f:link.action>
+        </div>
+
+        <f:flashMessages/>
+        <div class="tx-bsbh-events__list-view">
+            <f:widget.paginate objects="{events}" as="paginatedEvents"
+                               configuration="{itemsPerPage: 3, insertAbove: 1, insertBelow: 1}">
+                <ul class="tx-bsbh-events__listing">
+                    <f:for each="{paginatedEvents}" as="event">
+                        <li>
+                            <div class="event" tabindex="0" aria-label="{f:translate(key: 'tx_bsbhevents_domain_model_event')}" itemscope itemtype="http://schema.org/Event">
+                                <f:if condition="{feUserHasEditPermission}">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <f:link.action action="edit" class="btn btn-primary"
+                                                           arguments="{event : event}" addQueryString="1">
+                                                <f:translate key="tx_bsbhevents_edit"/>
+                                            </f:link.action>
+                                            <f:link.action action="delete" class="btn btn-secondary"
+                                                           additionalAttributes="{data-delete-event: true}"
+                                                           arguments="{event : event}" addQueryString="1">
+                                                <f:translate key="tx_bsbhevents_delete"/>
+                                            </f:link.action>
+                                        </div>
+                                    </div>
+                                </f:if>
+                                <div class="event__header">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h2 class="event__title" itemprop="name">{event.title}</h2>
+                                        </div>
+
+                                        <f:if condition="{event.isRepeatingEvent}">
+                                            <f:then>
+                                                <div class="col-md-4">
+                                                    <h3>
+                                                        <f:translate
+                                                                key="tx_bsbhevents_domain_model_event.recurrence_rule"/>
+                                                    </h3>
+                                                    <p>
+                                                        {event.recurrenceRule} </p>
+                                                </div>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="{f:if(condition: '{event.eventEnd}', then: 'col-md-2', else: 'col-md-4')}">
+                                                    <h3>
+                                                        <f:translate
+                                                                key="tx_bsbhevents_domain_model_event.event_start"/>
+                                                    </h3>
+                                                    <p>
+                                                        {event.eventStart->f:format.date(format: 'd.m.Y')}
+                                                        <f:if condition="!{event.isFullDay}">
+                                                            <f:if condition="{event.eventEnd}">
+                                                                <br/>
+                                                            </f:if>
+                                                            um {event.eventStart->f:format.date(format: 'H:i')}
+                                                        </f:if>
+                                                    </p>
+                                                </div>
+                                                <f:if condition="{event.eventEnd}">
+                                                    <div class="col-md-2">
+                                                        <h3>
+                                                            <f:translate key="tx_bsbhevents_domain_model_event.event_end"/>
+                                                        </h3>
+                                                        <p>
+                                                            {event.eventEnd->f:format.date(format: 'd.m.Y')}
+                                                            <f:if condition="!{event.isFullDay}">
+                                                                <f:if condition="{event.eventEnd->f:format.date(format: 'H:i')} != '00:00'">
+                                                                    <br/>um {event.eventEnd->f:format.date(format: 'H:i')}
+                                                                </f:if>
+                                                            </f:if>
+                                                        </p>
+                                                    </div>
+                                                </f:if>
+                                            </f:else>
+                                        </f:if>
+
+                                    </div>
+                                </div>
+                                <div class="event__content">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3>
+                                                <f:translate key="tx_bsbhevents_domain_model_event.content"/>
+                                            </h3>
+                                            <f:format.raw>
+                                                <events:markdown forbiddenTags="{settings.forbiddenTags}">{event.content}</events:markdown>
+                                            </f:format.raw>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <h3>
+                                                <f:translate key="tx_bsbhevents_domain_model_event.location"/>
+                                            </h3>
+                                            <p>
+                                                <f:format.nl2br>{event.location}</f:format.nl2br>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </f:for>
+                </ul>
+            </f:widget.paginate>
+            <f:if condition="{feUserHasEditPermission}">
+                <f:link.action action="new" class="btn btn-primary"><f:translate key="tx_bsbhevents_create_new"/></f:link.action>
+            </f:if>
+        </div>
+    </div>
+</f:section>
+</html>

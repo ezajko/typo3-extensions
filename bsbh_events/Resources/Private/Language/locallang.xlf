@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2018-01-05T13:33:05Z"
+          product-name="bsbh_events">
+        <header/>
+        <body>
+            <trans-unit id="tx_bsbhevents_domain_model_event">
+                <source>Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_plugin_name">
+                <source>Veranstaltungskalender</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_plugin_description">
+                <source>Fügt einen Veranstaltungskalender für einmalige und wiederkehrende Termine ein</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.title">
+                <source>Titel</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_start">
+                <source>Beginn</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_end">
+                <source>Ende</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_startDate">
+                <source>Beginn am</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_startTime">
+                <source>um</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_endDate">
+                <source>Endet am</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_endTime">
+                <source>um</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.is_repeating_event">
+                <source>Findet regelmäßig statt</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.is_full_day">
+                <source>ganztätig</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.content">
+                <source>Informationen zur Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.location">
+                <source>Veranstaltungsort</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.recurrence_rule">
+                <source>Wann?</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_categories">
+                <source>Kategorie</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.isRepeatingEvent_true">
+                <source>Regelmäßige Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.isRepeatingEvent_false">
+                <source>Einmaliger Termin</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_markdown_supported">
+                <source>Markdown wird unterstützt, allerdings keine Überschriften</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_markdown_preview">
+                <source>Markdown Vorschau</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_cancel">
+                <source>Abbrechen</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_edit">
+                <source>Bearbeiten</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_delete">
+                <source>Löschen</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_create">
+                <source>Termin anlegen</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_create_new">
+                <source>Neuen Termin anlegen</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_modal_delete_headline">
+                <source>Eintrag wirklich löschen?</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_onetime_events">
+                <source>Einmalige Termine</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_events">
+                <source>Termine</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_recurring_events">
+                <source>Regelmäßige Veranstaltungen</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_flexform_show_all_events">
+                <source>Termine aller Kategorien anzeigen?</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_flexform_categories">
+                <source>Termine dieser Kategorien anzeigen:</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

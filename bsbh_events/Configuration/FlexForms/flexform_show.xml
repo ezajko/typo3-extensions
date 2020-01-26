@@ -1,0 +1,53 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <type>array</type>
+                <el>
+                    <settings.showAllCategories>
+                        <TCEforms>
+                            <exclude>0</exclude>
+                            <label>LLL:EXT:bsbh_events/Resources/Private/Language/locallang.xlf:tx_bsbhevents_flexform_show_all_events</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>check</type>
+                            </config>
+                        </TCEforms>
+                    </settings.showAllCategories>
+                    <settings.categoriesList>
+                        <TCEforms>
+                            <exclude>0</exclude>
+                            <displayCond>FIELD:settings.showAllCategories:!=:1</displayCond>
+                            <label>LLL:EXT:bsbh_events/Resources/Private/Language/locallang.xlf:tx_bsbhevents_flexform_categories</label>
+                            <config>
+                                <type>select</type>
+                                <autoSizeMax>50</autoSizeMax>
+                                <foreign_table>sys_category</foreign_table>
+                                <foreign_table_where>AND sys_category.sys_language_uid IN (-1, 0) ORDER BY
+                                    sys_category.sorting ASC
+                                </foreign_table_where>
+                                <MM_opposite_field>items</MM_opposite_field>
+                                <MM>sys_category_record_mm</MM>
+                                <MM_match_fields>
+                                    <tablenames>tt_content</tablenames>
+                                    <fieldname>event_categories</fieldname>
+                                </MM_match_fields>
+                                <readOnly>0</readOnly>
+                                <maxitems>1</maxitems>
+                                <renderMode>tree</renderMode>
+                                <size>10</size>
+                                <treeConfig>
+                                    <appearance>
+                                        <expandAll>1</expandAll>
+                                        <showHeader>1</showHeader>
+                                    </appearance>
+                                    <parentField>parent</parentField>
+                                </treeConfig>
+                            </config>
+                        </TCEforms>
+                    </settings.categoriesList>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

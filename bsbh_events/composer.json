@@ -1,0 +1,15 @@
+{
+    "name": "dkd/bsbh-events",
+    "description": "This TYPO3 extension manages one-time and recurring events",
+    "require": {
+        "ezyang/htmlpurifier": "^4.9",
+        "erusev/parsedown": "^1.6",
+        "typo3/cms": "^8.7"
+    },
+    "authors": [
+        {
+            "name": "Tarang Patel",
+            "email": "tarang.patel@dkd.de"
+        }
+    ]
+}

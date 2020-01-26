@@ -1,0 +1,61 @@
+plugin.tx_bsbhevents_show {
+    view {
+        templateRootPaths.10 = {$plugin.tx_bsbhevents_show.view.templateRootPath}
+        partialRootPaths.10 = {$plugin.tx_bsbhevents_show.view.partialRootPath}
+        layoutRootPaths.10 = {$plugin.tx_bsbhevents_show.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_bsbhevents_show.persistence.storagePid}
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        callDefaultActionIfActionCantBeResolved = 1
+    }
+    settings {
+        # forbiddenTags are omitted when rendering the markdown field of events
+        forbiddenTags = {$plugin.tx_bsbhevents_show.settings.forbiddenTags}
+    }
+}
+
+page {
+    includeJSFooter {
+        bsbh_events_edit = EXT:bsbh_events/Resources/Public/Javascript/tx_bsbhevents_event_edit.js
+        bsbh_events_list = EXT:bsbh_events/Resources/Public/Javascript/tx_bsbhevents_event_list.js
+    }
+}
+
+markdownService = PAGE
+markdownService {
+    # TypeNum is used in Javascript, for example in
+    # bsbh_content_elements/Resources/Public/JavaScript/tx_bsbhcontentelements_markdown.js
+    # If you change the TypeNum, you have to take this into regard.
+    typeNum = 110
+    10 = USER
+    10 {
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+        extensionName = BsbhEvents
+        pluginName = Show
+        vendorName = Dkd
+        switchableControllerActions {
+            Event {
+                1 = renderMarkdown
+            }
+        }
+    }
+
+    config {
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-type:application/json
+        xhtml_cleaning = 0
+        admPanel = 0
+        debug = 0
+        no_cache = 1
+    }
+
+}

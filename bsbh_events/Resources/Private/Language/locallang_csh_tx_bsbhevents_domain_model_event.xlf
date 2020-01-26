@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2018-01-05T13:33:05Z"
+          product-name="bsbh_events">
+        <header/>
+        <body>
+            <trans-unit id="title.description">
+                <source>Titel</source>
+            </trans-unit>
+            <trans-unit id="event_start.description">
+                <source>Beginn</source>
+            </trans-unit>
+            <trans-unit id="event_end.description">
+                <source>Ende</source>
+            </trans-unit>
+            <trans-unit id="is_repeating_event.description">
+                <source>Regelmäßige Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="is_full_day.description">
+                <source>Ganztägige Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="content.description">
+                <source>Beschreibung / Informationstext</source>
+            </trans-unit>
+            <trans-unit id="location.description">
+                <source>Veranstaltungsort</source>
+            </trans-unit>
+            <trans-unit id="recurrence_rule.description">
+                <source>Informationen zu regelmäßiger Veranstaltung (z.B: "jeden dritten Montag im Monat")</source>
+            </trans-unit>
+            <trans-unit id="event_categories.description">
+                <source>Kategorie der Veranstaltung</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,18 @@
+plugin.tx_bsbhevents_show {
+    view {
+        # cat=plugin.tx_bsbhevents_show/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:bsbh_events/Resources/Private/Templates/
+        # cat=plugin.tx_bsbhevents_show/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:bsbh_events/Resources/Private/Partials/
+        # cat=plugin.tx_bsbhevents_show/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:bsbh_events/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_bsbhevents_show//a; type=string; label=Default storage PID
+        storagePid = 22
+    }
+    settings {
+        # forbiddenTags are omitted when rendering the markdown field of events
+        forbiddenTags = h1,h2,h3,h4,h5,h6
+    }
+}

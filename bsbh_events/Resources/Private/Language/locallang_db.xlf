@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2018-01-05T13:33:05Z"
+          product-name="bsbh_events">
+        <header/>
+        <body>
+            <trans-unit id="tx_bsbhevents_domain_model_event">
+                <source>Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.title">
+                <source>Titel</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_start">
+                <source>Beginn</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_end">
+                <source>Ende</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.is_repeating_event">
+                <source>regelmäßige Veranstaltung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.is_full_day">
+                <source>ganztägig</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.content">
+                <source>Beschreibung</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.location">
+                <source>Ort</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.recurrence_rule">
+                <source>Beschreibung für regelmäßige Veranstaltung (z.B. "jeden dritten Montag im Monat")</source>
+            </trans-unit>
+            <trans-unit id="tx_bsbhevents_domain_model_event.event_categories">
+                <source>Kategorie</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
