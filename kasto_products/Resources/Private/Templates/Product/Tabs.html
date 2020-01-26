@@ -1,0 +1,90 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="tx-kasto-products">
+        <div class="products-list products-tabs page-tabnav-menu ">
+            <div class="ce-tabs-wrapper">
+                <div class="nav-wrapper bg-grey">
+                    <div class="container">
+                        <f:if condition="{data.header}">
+                            <div class="plugin-header header">
+                                <f:format.raw>{data.header}</f:format.raw>
+                            </div>
+                        </f:if>
+
+                        <f:flashMessages />
+
+                        <nav class="navbar navbar-toggleable-md">
+                            <ul class="navbar-nav tabnav mobile" role="tablist">
+                                <f:for each="{products}" as="product" iteration="iterator">
+                                    <li role="presentation" class="nav-item" data-toggle="collapse" data-target="#id{data.uid}-prod{product.uid}">
+                                        <a href="#" class="nav-link {f:if(condition: iterator.isFirst, then: ' active')}"
+                                           role="tab"
+                                           data-target="#cid{data.uid}-prod{product.uid}"
+                                           data-toggle="tab"
+                                           aria-controls="cid{data.uid}-prod{product.uid}">
+                                            <f:format.raw>
+                                                <k:format.tabsTitle text="{product.title}" isCursive="0" />
+                                            </f:format.raw>
+                                            <span class="saw-cutting-area">
+                                                <f:translate id="product.cutting_area"/>:
+                                                <f:translate id="product.cutting_area.prefix"/> {product.cuttingArea}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                            <ul class="navbar-nav tabnav desktop" role="tablist">
+                                <f:for each="{products}" as="product" iteration="iterator">
+                                    <li role="presentation" class="nav-item">
+                                        <a href="#" class="nav-link {f:if(condition: iterator.isFirst, then: ' active')}"
+                                           role="tab"
+                                           data-target="#cid{data.uid}-prod{product.uid}"
+                                           data-toggle="tab"
+                                           aria-controls="cid{data.uid}-prod{product.uid}">
+                                            <f:format.raw>
+                                                <k:format.tabsTitle text="{product.title}" isCursive="0" />
+                                            </f:format.raw>
+                                            <span class="saw-cutting-area">
+                                                <f:translate id="product.cutting_area"/>:
+                                                <f:translate id="product.cutting_area.prefix"/> {product.cuttingArea}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="tab-content container">
+                    <f:for each="{products}" as="product" iteration="iterator">
+                        <div role="tabpanel"
+                             class="product-list tab-pane {f:if(condition: iterator.isFirst, then: ' active')}"
+                             id="cid{data.uid}-prod{product.uid}">
+                            <div class="card">
+                                <div id="cid{data.uid}-pprod{product.uid}" class="product-collapse-header row" data-toggle="collapse" data-target="#id{data.uid}-prod{product.uid}"
+                                data-parent="cid{data.uid}-prod{product.uid}" aria-controls="id{data.uid}-prod{product.uid}">
+                                    <span class="h3">3.3 &#45; </span>
+                                    <span class="product-title"> {product.title}</span>
+                                    <span class="saw-cutting-area">
+                                        <f:translate id="product.cutting_area"/>:
+                                        <f:translate id="product.cutting_area.prefix"/> {product.cuttingArea}
+                                    </span>
+                                    <span class="round-shape"><span class="circle"><span class="horizontal"></span><span class="vertical"></span></span></span>
+                                </div>
+                                <div class="product-item collapse {f:if(condition: iterator.isFirst, then: 'show')}" aria-labelledby="cid{data.uid}-pprod{product.uid}" id="id{data.uid}-prod{product.uid}">
+                                    <f:render partial="Product/Tabs/ImageWithDescription" arguments="{product: product}"/>
+                                    <f:render partial="Product/Detail/Technical" arguments="{product: product}"/>
+                                    <f:render partial="Product/Detail/ContactButtons" arguments="{product: product}"/>
+                                </div>
+                            </div>
+                        </div>
+                    </f:for>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+</html>

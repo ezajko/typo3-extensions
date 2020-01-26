@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-31T21:17:35Z"
+          product-name="kasto_products">
+        <header/>
+        <body>
+            <trans-unit id="flexforms_general.mode">
+                <source>Choose output mode</source>
+                <target>Wählen Sie den Ausgangsmodus</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.mode.list">
+                <source>Product list</source>
+                <target>Produktliste (Fliese und Liste)</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.mode.detail">
+                <source>Product detail</source>
+                <target>Produktdetailseite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.mode.tabs">
+                <source>Product tabs (KastoWin)</source>
+                <target>Produkt-Tabs (KastoWin)</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.type_to_show">
+                <source>Choose product type to show</source>
+                <target>Wählen Sie den anzuzeigenden Produkttyp aus</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.show_is_used">
+                <source>Show is used?</source>
+                <target>Gebrauchter Gegenstand</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.service_detail_pid">
+                <source>Service detail page</source>
+                <target>Service-Detailseite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.contact_pid">
+                <source>Contact form page</source>
+                <target>Kontaktformular Seite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.consultants_pid">
+                <source>Consultants page</source>
+                <target>Berater kontaktieren Seite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.detail_page">
+                <source>Product detail page</source>
+                <target>Produktdetailseite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.back_page">
+                <source>Page for back link</source>
+                <target>Seite für Backlink</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.item_per_page">
+                <source>Product items per page</source>
+                <target>Produktartikel pro Seite</target>
+            </trans-unit>
+            <trans-unit id="flexforms_general.product.products_to_show_in_tabs">
+                <source>Choose saw machines products to show in tab section</source>
+                <target>Wählen Sie Sägemaschinen Produkte, um in Registerkarte zu zeigen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="product">
+    <div id="main-logo-wrapper">
+        <f:cObject typoscriptObjectPath="lib.logo"/>
+    </div>
+    <div class="main-title">
+        <f:format.raw>
+            <h3>
+                <k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}"/>
+            </h3>
+        </f:format.raw>
+    </div>
+    <f:render partial="Product/Detail/Header" arguments="{product: product, settings: settings}"/>
+
+    <div class="single-item">
+        <v:media.exists file="{product.images.0.originalResource.publicUrl}">
+            <f:image src="{product.images.0.originalResource.publicUrl}" absolute="1" maxWidth="600"/>
+        </v:media.exists>
+    </div>
+
+    <f:render partial="Product/Detail/Description" arguments="{product: product, settings: settings}"/>
+    <f:render partial="Product/Detail/Technical" arguments="{product: product, settings: settings}"/>
+</div>
+
+</html>

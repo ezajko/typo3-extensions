@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:kc="http://typo3.org/ns/Media711/KastoContent/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="description-section">
+    <div class="row">
+        <f:if condition="{product.contact}">
+            <f:then>
+                <div class="col-lg-8">
+                    <f:render section="DescriptionPart" arguments="{product: product}" />
+                </div>
+                <div class="col-lg-4">
+                    <div class="h3"><f:translate id="section.contact.happy_to_help" />:</div>
+                    <div class="contact-column">
+                        <div class="image-box">
+                            <v:media.exists file="{product.contact.portraitImage.originalResource.publicUrl}">
+                                <f:image image="{product.contact.portraitImage}" maxWidth="360" />
+                            </v:media.exists>
+                        </div>
+                        <div class="bg-grey contact-description">
+                            <p class="title">{product.contact.firstName} {product.contact.lastName}</p>
+                            <f:if condition="{product.contact.role}">
+                                <p class="role">{product.contact.role}</p>
+                            </f:if>
+                            <f:if condition="{product.contact.phone}">
+                                <p class="phone">
+                                    <f:translate id="section.contact.tel" />:
+                                    <a href="tel:{product.contact.phone}">{product.contact.phone}</a>
+                                </p>
+                            </f:if>
+                            <f:if condition="{product.contact.email}">
+                                <p class="email">
+                                    <f:link.email email="{product.contact.email}" />
+                                </p>
+                            </f:if>
+                            <f:if condition="{settings.contactPID}">
+                                <f:link.page pageUid="{settings.contactPID}" class="btn-default" target="_blank">
+                                    <span class="caption"><f:translate id="section.contact.make_inquiry" /></span>
+                                </f:link.page>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <div class="col-lg-12">
+                    <f:render section="DescriptionPart" arguments="{product: product}" />
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+</div>
+</html>
+
+<f:section name="DescriptionPart">
+    <f:format.raw>
+       <h3><k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}" /></h3>
+    </f:format.raw>
+    <f:format.html>{product.descriptionLong}</f:format.html>
+    <kc:falTranslationFix record="{product}" tableName="tx_kastoproducts_domain_model_product" relationFieldName="document_brochure"
+                          renderExtbase="1" as="files">
+        <f:for each="{files}" as="file">
+            <v:media.exists file="{file.originalResource.publicUrl}">
+                <f:link.typolink parameter="{file.originalResource.publicUrl}"
+                                 class="download-link"
+                                 target="_blank"
+                    >
+                    <f:translate id="products.section.description.download_document_brochure" />
+                    (<f:format.case mode="upper">{file.originalResource.extension}</f:format.case>
+                    <f:format.bytes decimals="1">{file.originalResource.size}</f:format.bytes>)
+                </f:link.typolink>
+            </v:media.exists>
+        </f:for>
+    </kc:falTranslationFix>
+
+</f:section>

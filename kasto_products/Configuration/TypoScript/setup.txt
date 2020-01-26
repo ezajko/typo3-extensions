@@ -1,0 +1,44 @@
+
+plugin.tx_kastoproducts_pi1 {
+    view {
+        templateRootPaths.0 = EXT:kasto_products/Resources/Private/Templates/
+        partialRootPaths.0  = EXT:kasto_products/Resources/Private/Partials/
+        layoutRootPaths.0   = EXT:kasto_products/Resources/Private/Layouts/
+    }
+
+    settings {
+        productsUid {
+            sawMachines    = 1
+            storageSystems = 2
+        }
+    }
+}
+
+# Extbase configuration
+config.tx_extbase {
+    persistence {
+        classes {
+            Media711\KastoProducts\Domain\Model\AttributeValue {
+                mapping {
+                    columns.l10n_parent.mapOnProperty = l10nParent
+                }
+            }
+
+            Media711\KastoProducts\Domain\Model\Product {
+                mapping {
+                    columns {
+                        l10n_parent.mapOnProperty = l10nParent
+                        sorting.mapOnProperty     = sorting
+                        tstamp.mapOnProperty      = tstamp
+                        crdate.mapOnProperty      = crdate
+                    }
+                }
+            }
+        }
+    }
+    objects {
+        TYPO3\CMS\Extbase\Persistence\QueryResultInterface {
+            className = Media711\KastoProducts\Persistence\QueryResult
+        }
+    }
+}

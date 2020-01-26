@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{product.tables}">
+    <div class="technical-section">
+        <div class="table-header h3">
+            <div class="left">
+                <f:translate id="products.section.technical_data" />
+            </div>
+            <div class="right">
+                <f:format.raw>
+                    <k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}" />
+                </f:format.raw>
+            </div>
+        </div>
+        <f:format.raw><k:tablesParser tables="{product.tables}" product="{product}" /></f:format.raw>
+        <div class="notice">
+            <f:translate id="products.section.technical_data.table_policy" />
+        </div>
+    </div>
+</f:if>
+</html>

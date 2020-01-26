@@ -1,0 +1,35 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{product.type.uid}=={settings.productsUid.sawMachines}">
+    <div class="header-section">
+        <div class="type">
+            <span class="title"><f:translate id="product.type" />:</span>
+            <f:if condition="{product.sawType}">{product.sawType.value}</f:if>
+        </div>
+        <div class="saw-automation">
+            <span class="title"><f:translate id="product.saw_automation" />:</span>
+            <f:if condition="{product.sawAutomation}">
+                <f:for each="{product.sawAutomation}" as="attr">{attr.value}</f:for>
+            </f:if>
+        </div>
+        <div class="saw-cutting-area">
+            <span class="title"><f:translate id="product.cutting_area" />:</span>
+            <f:if condition="{product.title} != 'KASTOwin amc'">
+                <f:translate id="product.cutting_area.prefix" />
+            </f:if> {product.cuttingArea}
+        </div>
+    </div>
+</f:if>
+<f:if condition="{product.type.uid}=={settings.productsUid.storageSystems}">
+    <div class="header-section">
+        <div class="type">
+            <span class="title"><f:translate id="product.storage_type" />:</span>
+            <f:if condition="{product.storageType}">{product.storageType.value}</f:if>
+        </div>
+        <div class="storage-system-type">
+            <span class="title"><f:translate id="product.storage_style" />:</span>
+            <f:if condition="{product.storageStyle}">{product.storageStyle.value}</f:if>
+        </div>
+    </div>
+</f:if>
+</html>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2017-05-31T21:17:35Z" 
+          product-name="kasto_products">
+        <header/>
+        <body>
+            <trans-unit id="title.description">
+                <source>title</source>
+            </trans-unit>
+            <trans-unit id="alias.description">
+                <source>alias</source>
+            </trans-unit>
+            <trans-unit id="title_skip_cursive.description">
+                <source>titleSkipCursive</source>
+            </trans-unit>
+            <trans-unit id="is_used.description">
+                <source>isUsed</source>
+            </trans-unit>
+            <trans-unit id="description_short.description">
+                <source>descriptionShort</source>
+            </trans-unit>
+            <trans-unit id="description_long.description">
+                <source>descriptionLong</source>
+            </trans-unit>
+            <trans-unit id="cutting_area.description">
+                <source>cuttingArea</source>
+            </trans-unit>
+            <trans-unit id="cutting_direction.description">
+                <source>cuttingDirection</source>
+            </trans-unit>
+            <trans-unit id="images.description">
+                <source>images</source>
+            </trans-unit>
+            <trans-unit id="document_brochure.description">
+                <source>documentBrochure</source>
+            </trans-unit>
+            <trans-unit id="storage_style.description">
+                <source>storageStyle</source>
+            </trans-unit>
+            <trans-unit id="storage_type.description">
+                <source>storageType</source>
+            </trans-unit>
+            <trans-unit id="model_series.description">
+                <source>modelSeries</source>
+            </trans-unit>
+            <trans-unit id="application_area.description">
+                <source>applicationArea</source>
+            </trans-unit>
+            <trans-unit id="saw_type.description">
+                <source>sawType</source>
+            </trans-unit>
+            <trans-unit id="cutting_options.description">
+                <source>cuttingOptions</source>
+            </trans-unit>
+            <trans-unit id="cut_count.description">
+                <source>cutCount</source>
+            </trans-unit>
+            <trans-unit id="material.description">
+                <source>material</source>
+            </trans-unit>
+            <trans-unit id="material_width.description">
+                <source>materialWidth</source>
+            </trans-unit>
+            <trans-unit id="material_height.description">
+                <source>materialHeight</source>
+            </trans-unit>
+            <trans-unit id="material_diameter.description">
+                <source>materialDiameter</source>
+            </trans-unit>
+            <trans-unit id="material_square.description">
+                <source>materialSquare</source>
+            </trans-unit>
+            <trans-unit id="saw_automation.description">
+                <source>sawAutomation</source>
+            </trans-unit>
+            <trans-unit id="material_shaping.description">
+                <source>materialShaping</source>
+            </trans-unit>
+            <trans-unit id="system_name.description">
+                <source>systemName</source>
+            </trans-unit>
+            <trans-unit id="type.description">
+                <source>type</source>
+            </trans-unit>
+            <trans-unit id="addons.description">
+                <source>addons</source>
+            </trans-unit>
+            <trans-unit id="services.description">
+                <source>services</source>
+            </trans-unit>
+            <trans-unit id="related_references.description">
+                <source>relatedReferences</source>
+            </trans-unit>
+            <trans-unit id="conact.description">
+                <source>conact</source>
+            </trans-unit>
+            <trans-unit id="video_urls.description">
+                <source>videoUrls</source>
+            </trans-unit>
+            <trans-unit id="tables.description">
+                <source>tables</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,36 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <f:flashMessages/>
+    <div class="product">
+        <div class="container">
+            <f:if condition="{settings.backPID}">
+                <f:link.page pageUid="{settings.backPID}">
+                    <div class="back-label"><span class="fa fa-angle-left"></span><span><f:translate
+                            id="back_to_list.type_{product.type.uid}"/></span></div>
+                </f:link.page>
+            </f:if>
+            <div class="main-title">
+                <f:format.raw>
+                    <h1><k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}"/></h1>
+                </f:format.raw>
+            </div>
+            <f:render partial="Product/Detail/Header" arguments="{product: product, settings: settings}"/>
+            <f:render partial="Product/Detail/Gallery" arguments="{product: product, settings: settings}"/>
+            <f:render partial="Product/Detail/Description" arguments="{product: product, settings: settings}"/>
+            <f:render partial="Product/Detail/Technical" arguments="{product: product, settings: settings}"/>
+            <f:render partial="Product/Detail/ContactButtons" arguments="{product: product, settings: settings}"/>
+            <f:render partial="Product/Detail/Addons" arguments="{product: product, settings: settings}"/>
+        </div>
+    </div>
+
+    <f:render partial="Product/Detail/Services" arguments="{product: product, settings: settings}"/>
+
+    <div class="container">
+        <f:render partial="Product/Detail/References" arguments="{product: product, settings: settings}"/>
+    </div>
+</f:section>
+</html>

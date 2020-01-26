@@ -1,0 +1,33 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ts="http://typo3.org/ns/Helhum/TyposcriptRendering/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="file-contact-buttons-section">
+    <div class="row">
+        <div class="document col-lg-4 col-md-6">
+            <a href="{ts:uri.ajaxAction(action: 'pdf', controller: 'Product', arguments: {product: product})}" rel="nofollow" class="btn-download btn-grey-download" download>
+                <span class="caption"><f:translate id="products.section.buttons.download_data_sheet" /></span>
+            </a>
+        </div>
+        <div class="recommend col-lg-4 col-md-6">
+            <a href="{f:render(section: 'EmailBody', arguments: {product: product, settings: settings})}" class="btn-recommend btn-grey-mail" target="_blank">
+                <span class="caption"><f:translate id="products.section.buttons.recommend" /></span>
+            </a>
+        </div>
+        <div class="contact-consultant col-lg-4 col-md-6">
+            <f:if condition="{settings.consultantsPID}">
+                <f:link.page pageUid="{settings.consultantsPID}" class="btn-consultant btn-contact" target="_blank">
+                    <span class="caption">
+                        <f:translate id="products.section.buttons.contact_consultant" />
+                    </span>
+                </f:link.page>
+            </f:if>
+        </div>
+    </div>
+</div>
+</html>
+
+
+<f:section name="EmailBody">
+    <f:spaceless>mailto:?subject=KASTO - {product.title}&body=<f:format.urlencode value="{product.title}"/>%0D<f:format.urlencode value="{f:format.stripTags(value: product.descriptionLong)}" />%0D%0D<v:page.absoluteUrl /></f:spaceless>
+</f:section>

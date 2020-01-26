@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:ts="http://typo3.org/ns/Helhum/TyposcriptRendering/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{products}">
+    <f:then>
+        <div class="container">
+            <div class="product-header">
+                <div class="product-image"></div>
+                <div class="empty"></div>
+                <div class="text-container">
+                    <div class="product-name"><f:translate id="product.title" /></div>
+                    <div class="product-saw-automation"><f:translate id="product.saw_automation" /></div>
+                    <div class="product-saw-cutting-area"><f:translate id="product.cutting_area" /></div>
+                    <div class="divCell"></div>
+                </div>
+            </div>
+        </div>
+            <div class="list divTable">
+                <f:for each="{v:iterator.chunk(subject: products, count: 3)}" as="chunkItems">
+                    <div class="row">
+                        <f:for each="{chunkItems}" as="product" iteration="iterator">
+                            <f:render partial="Product/List/Item" arguments="{_all}"/>
+                        </f:for>
+                    </div>
+                </f:for>
+            </div>
+            <f:if condition="{isLast}">
+                <f:else>
+                    <span id="products-load-more"
+                       class="h2"
+                       data-action-uri="{ts:uri.ajaxAction(action: 'ajaxLoadMore', controller: 'Product')}"
+                       data-page="1">
+                        <f:translate id="products.load_more" />...
+                    </span>
+                </f:else>
+            </f:if>
+    </f:then>
+    <f:else>
+        <div class="products-not-found"><h3><f:translate id="products.not_found" /></h3></div>
+    </f:else>
+</f:if>
+</html>

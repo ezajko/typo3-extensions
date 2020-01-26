@@ -1,0 +1,111 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="gallery-section">
+    <f:if condition="{v:math.sum(a: '{product.images -> f:count()}', fail: 0, b: '{product.videoUrls -> f:count()}')}==1">
+        <f:then>
+            <div class="single-item">
+                <f:if condition="{product.images}">
+                    <v:media.exists file="{product.images.0.originalResource.publicUrl}">
+                        <a href="{product.images.0.originalResource.publicUrl}" data-action="colorbox">
+                            <f:image image="{product.images.0}" maxWidth="900"/>
+                        </a>
+                    </v:media.exists>
+                </f:if>
+                <f:if condition="{product.videoUrls}">
+                    <iframe width="700" height="400"
+                            src="https://www.youtube.com/embed/{product.videoUrls.0.value}"></iframe>
+                </f:if>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="multiple-items">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="product-gallery-carousel owl-carousel owl-theme" data-slider-id="1">
+                            <f:if condition="{product.images}">
+                                <f:for each="{product.images}" as="productImage" iteration="iterator">
+                                    <v:media.exists file="{productImage.originalResource.publicUrl}">
+                                        <div class="image-wrap">
+                                            <div class="image-{iterator.cycle} item-wrapper">
+                                                <a href="{productImage.originalResource.publicUrl}"
+                                                   class="gallery"
+                                                   alt="{productImage.description}"
+                                                   data-action="colorbox"
+                                                >
+                                                    <f:image image="{productImage}" maxWidth="700"/>
+                                                </a>
+                                            </div>
+                                            <div class="caption-wrapper">
+                                                <f:if condition="{productImage.originalResource.description}">
+                                                    <div class="image-description">
+                                                        {productImage.originalResource.description}
+                                                    </div>
+                                                </f:if>
+                                                <span class="zoom-image">
+                                                    <span class="fa fa-search"></span>
+                                                    <f:translate id="products.section.gallery.zoom"/>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </v:media.exists>
+                                </f:for>
+                            </f:if>
+                            <f:if condition="{product.videoUrls}">
+                                <f:for each="{product.videoUrls}" as="productVideo">
+                                    <div class="product-youtube-videos item-wrapper">
+                                        <iframe width="600" height="500"
+                                                src="https://www.youtube.com/embed/{productVideo.value}"
+                                                allowfullscreen></iframe>
+                                    </div>
+                                </f:for>
+                            </f:if>
+                        </div>
+                    </div>
+                    <div class="owl-thumbs col-lg-4" data-slider-id="1">
+                        <f:if condition="{product.images}">
+                            <f:for each="{product.images}" as="productImage" iteration="iterator">
+                                <v:media.exists file="{productImage.originalResource.publicUrl}">
+                                    <div class="owl-thumb-item thumbnail">
+                                        <div class="image-{iterator.cycle}">
+                                            <f:image image="{productImage}" maxWidth="128"
+                                                     maxHeight="108"/>
+                                        </div>
+                                        <div class="frame">
+                                        </div>
+                                        <span class="round-shape big-circle">
+                                            <span class="circle">
+                                                <span class="horizontal"></span>
+                                                <span class="vertical"></span>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </v:media.exists>
+                            </f:for>
+                        </f:if>
+                        <f:if condition="{product.videoUrls}">
+                            <f:for each="{product.videoUrls}" as="productVideo">
+                                <div class="owl-thumb-item thumbnail">
+                                    <div class="product-youtube-videos video-thumb">
+                                        <img src="https://img.youtube.com/vi/{productVideo.value}/0.jpg" width="128"
+                                             height="108"/>
+                                    </div>
+                                    <div class="frame">
+                                    </div>
+                                    <span class="round-shape big-circle">
+                                        <span class="circle video-icon">
+                                            <span class="horizontal"></span>
+                                            <span class="vertical"></span>
+                                            <span class="fa fa-play"></span>
+                                        </span>
+                                    </span>
+                                </div>
+                            </f:for>
+                        </f:if>
+                    </div>
+                </div>
+            </div>
+        </f:else>
+    </f:if>
+</div>
+</html>

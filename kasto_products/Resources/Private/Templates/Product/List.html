@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <div class="tx-kasto-products">
+       <div class="row">
+           <div class="container">
+               <f:if condition="{data.header}">
+                   <div class="plugin-header product-tile h3">
+                       <f:format.raw>{data.header}</f:format.raw>
+                   </div>
+               </f:if>
+
+               <f:flashMessages />
+
+               <f:if condition="{settings.type}=={settings.productsUid.sawMachines}">
+                   <f:render partial="Product/Filter" arguments="{_all}" />
+               </f:if>
+               <div class="products-list">
+                   <f:render partial="Product/List/List" arguments="{_all}"/>
+               </div>
+               <div class="ajax-loading-dots"><span>.</span><span>.</span><span>.</span></div>
+           </div>
+       </div>
+    </div>
+</f:section>
+</html>

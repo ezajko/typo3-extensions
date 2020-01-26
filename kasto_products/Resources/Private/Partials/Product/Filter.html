@@ -1,0 +1,80 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:ts="http://typo3.org/ns/Helhum/TyposcriptRendering/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="saw-machines-filters product-tile"
+     data-action-uri="{ts:uri.ajaxAction(action: 'ajaxSawMachinesFilter', controller: 'Product')}">
+    <div class="filter-level-0">
+       <div class="filter-title">
+           <span class="index">1</span>
+           <f:translate id="filter.criteria" />:
+       </div>
+        <f:for each="{sawMachinesFilters.0}" as="sawAttributeValues" iteration="iterator" key="key">
+            <div class="filter-attribute dropdown dropdown-default">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdown_{key}" aria-expanded="false" >
+                    <label for="level1-attribute-{key}" ><f:translate id="product.{key}" /></label>
+                    <label for="level1-attribute-{key}" class="text default-hidden" ><f:translate id="product.{key}" /></label>
+                    <span class="caret-icon"></span>
+                </button>
+                <ul id="level1-attribute-{key}" class="saw-filter dropdown-menu non-linked"
+                    aria-labelledby="dropdown_{key}" name="{key}" data-filter-level="0">
+                    <f:for each="{sawAttributeValues}" as="attributeValue">
+                        <li data-value="{attributeValue.uid}" class="dropdown-item">{attributeValue.value}</li>
+                    </f:for>
+                </ul>
+            </div>
+        </f:for>
+        <div class="filter-attribute dropdown dropdown-default">
+            <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdown_cutting_direction" aria-expanded="false" >
+                <label for="attribute-cutting_direction" ><f:translate id="product.cutting_direction" /></label>
+                <label for="attribute-cutting_direction" class="text default-hidden"><f:translate id="product.cutting_direction" /></label>
+                <span class="caret-icon"></span>
+            </button>
+            <ul id="attribute-cutting_direction" class="saw-filter dropdown-menu non-linked"
+                aria-labelledby="dropdown_cutting_direction" name="cutting_direction" data-filter-level="0">
+                <li data-value="cutdirection_quer"  class="dropdown-item"><f:translate id="product.cutting_direction.quer" /></li>
+                <li data-value="cutdirection_lang" class="dropdown-item"><f:translate id="product.cutting_direction.lang" /></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="filter-level-1 hidden">
+        <div class="filter-title">
+            <span class="index">2</span>
+            <f:translate id="filter.dimensions" />:
+        </div>
+        <f:for each="{sawMachinesFilters.1}" as="sawAttributeValues" iteration="iterator" key="key">
+            <div class="filter-attribute dropdown dropdown-default {key}">
+                <button class="btn dropdown-toggle" data-toggle="dropdown" type="button" id="dropdown_button_{key}" aria-expanded="false" >
+                    <label for="level2-attribute-{key}" ><f:translate id="product.{key}" /></label>
+                    <label for="level2-attribute-{key}" class="text default-hidden"><f:translate id="product.{key}" /></label>
+                    <span class="caret-icon"></span>
+                </button>
+                <ul id="level2-attribute-{key}" class="saw-filter dropdown-menu non-linked" aria-labelledby="dropdown_button_{key}" name="{key}" data-filter-level="1">
+                    <f:for each="{sawAttributeValues -> v:iterator.sort(sortBy: 'value', sortFlags:'SORT_NUMERIC')}"
+                           as="attributeValue">
+                        <li data-value="{attributeValue.uid}" class="dropdown-item">{attributeValue.value}</li>
+                    </f:for>
+                </ul>
+            </div>
+        </f:for>
+    </div>
+
+    <div class="toolbar">
+        <div class="clean-filters-section">
+            <span class="clean-all-filters hidden" data-filter-level="0" data-action="clear" >
+                <span class="fa fa-times-circle"></span>
+                <f:translate id="filter.clean.filters" />
+            </span>
+            <span class="clean-subfilters hidden" data-filter-level="1" data-action="clear" >
+                <span class="fa fa-times-circle"></span>
+                <f:translate id="filter.clean.subfilters" />
+            </span>
+        </div>
+        <div class="products-view">
+            <span class="list toggle-view"><span class="fa fa-list"></span><f:translate id="view.title" /></span>
+            <span class="tile toggle-view"><span class="fa fa-th"></span><f:translate id="view.tile" /></span>
+        </div>
+    </div>
+</div>
+</html>

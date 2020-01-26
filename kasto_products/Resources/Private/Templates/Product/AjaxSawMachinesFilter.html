@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{products}">
+    <f:then>
+        <f:for each="{v:iterator.chunk(subject: products, count: 3)}" as="chunkItems">
+            <div class="row">
+                <f:for each="{chunkItems}" as="product" iteration="iterator">
+                    <f:render partial="Product/List/Item" arguments="{_all}"/>
+                </f:for>
+            </div>
+        </f:for>
+    </f:then>
+    <f:else>
+        <div class="products-not-found"><h3><f:translate id="products.not_found" /></h3></div>
+    </f:else>
+</f:if>
+</html>

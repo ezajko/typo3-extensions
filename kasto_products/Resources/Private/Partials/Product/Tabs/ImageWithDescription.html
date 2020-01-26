@@ -1,0 +1,38 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers"  data-namespace-typo3-fluid="true">
+
+<div class="image-desc-section">
+    <div class="row">
+        <div class="col-md-4">
+            <v:media.exists file="{product.images.0.originalResource.publicUrl}">
+                <div class="single-tab-image">
+                   <a href="{product.images.0.originalResource.publicUrl}" class="gallery" data-action="colorbox">
+                       <f:image image="{product.images.0}" maxWidth="360" />
+                   </a>
+                </div>
+                <span class="caption-wrapper">
+                    <div class="zoom-image">
+                        <span class="fa fa-search"></span>
+                        <f:translate id="products.section.gallery.zoom" />
+                    </div>
+                    <span class="image-title"></span>
+                </span>
+            </v:media.exists>
+        </div>
+        <div class="col-md-8">
+            <f:format.raw>
+                <h3><k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}" /></h3>
+            </f:format.raw>
+            <f:format.html>{product.descriptionLong}</f:format.html>
+            <v:media.exists file="{product.documentBrochure.originalResource.publicUrl}">
+                <a href="{product.documentBrochure.originalResource.publicUrl}" class="download-link" download>
+                    <f:translate id="products.section.description.download_document_brochure" />
+                    (<f:format.case mode="upper">{product.documentBrochure.originalResource.extension}</f:format.case>
+                    <f:format.bytes decimals="1">{product.documentBrochure.originalResource.size}</f:format.bytes>)
+                </a>
+            </v:media.exists>
+        </div>
+    </div>
+</div>
+</html>

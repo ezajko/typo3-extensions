@@ -1,0 +1,60 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:k="http://typo3.org/ns/Media711/KastoProducts/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="col-md-4 teaser-item">
+    <f:link.action action="detail" pageUid="{settings.detailPID}" arguments="{product: product}" class="product-preview">
+        <div class="image-container">
+            <div class="list-item-wrapper">
+                <v:media.exists file="{product.images.0.originalResource.publicUrl}">
+                    <f:if condition="{product.sawType}">
+                        <f:then><div class="type">{product.sawType.value}</div></f:then>
+                        <f:else if="{product.storageType}"><div class="type">{product.storageType.value}</div></f:else>
+                        <f:else if="{product.systemName}"><div class="type">{product.systemName.value}</div></f:else>
+                    </f:if>
+                    <figure>
+                        <f:image image="{product.images.0}" maxWidth="302" maxHeight="240" />
+                    </figure>
+                </v:media.exists>
+                <span class="more big-circle">
+                    <span class="round-shape">
+                        <span class="circle">
+                            <span class="horizontal"></span>
+                            <span class="vertical"></span>
+                        </span>
+                    </span>
+                    <span class="text"><f:translate id="products.more" /></span>
+                </span>
+            </div>
+        </div>
+        <div class="text-container shadowed">
+            <f:format.raw>
+                <div class="h3"><k:format.italicText text="{product.title}" isCursive="{product.titleSkipCursive}" /></div>
+            </f:format.raw>
+            <f:comment><!-- TODO: find a better way to check if type, NOT via id of attr value model --></f:comment>
+            <f:if condition="({f:if(condition: '{product.type.uid}=={settings.productsUid.sawMachines}', then: 1)} &&
+                              {f:if(condition: '{product.sawType.uid}!=323', then: 1)})">
+                <div class="saw-automation">
+                    <span class="list-hide"><f:translate id="product.saw_automation" />:</span>
+                    <f:for each="{product.sawAutomation}" as="attr">{attr.value}</f:for>
+                </div>
+                <div class="saw-cutting-area">
+                    <span class="list-hide"><f:translate id="product.cutting_area" />:</span>
+                    <f:if condition="{product.cuttingArea} != {f:translate(id: 'product.cutting_area.prefix_on_demand')}">
+                        <f:if condition="{product.title} != 'KASTOwin amc'">
+                            <f:translate id="product.cutting_area.prefix" />
+                        </f:if>
+                    </f:if> {product.cuttingArea}
+                </div>
+            </f:if>
+            <span class="divCell moreTable">
+                <span class="round-shape">
+                    <span class="circle">
+                        <span class="horizontal"></span>
+                        <span class="vertical"></span>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </f:link.action>
+</div>
+</html>

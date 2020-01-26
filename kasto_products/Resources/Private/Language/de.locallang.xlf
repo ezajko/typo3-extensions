@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-31T21:17:35Z"
+          product-name="kasto_products">
+        <header/>
+        <body>
+            <trans-unit id="product">
+                <source>Product</source>
+                <target>Produkt</target>
+            </trans-unit>
+            <trans-unit id="product.title">
+                <source>Title</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="product.alias">
+                <source>Alias</source>
+                <target>Alias</target>
+            </trans-unit>
+            <trans-unit id="product.title_skip_cursive">
+                <source>Title Skip Cursive</source>
+                <target>Automatische Kursivschreibung deaktivieren</target>
+            </trans-unit>
+            <trans-unit id="product.is_used">
+                <source>Is Used</source>
+                <target>Gebrauchter Gegenstand</target>
+            </trans-unit>
+            <trans-unit id="product.description_short">
+                <source>Description Short</source>
+                <target>Kurz-Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="product.description_long">
+                <source>Description Long</source>
+                <target>Lang-Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_area">
+                <source>Cutting range</source>
+                <target>Schnittbereich</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_area.prefix">
+                <source>up to</source>
+                <target>bis</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_area.prefix_on_demand">
+                <source>on demand</source>
+                <target>auf Anfrage</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_direction">
+                <source>Cutting Direction</source>
+                <target>Schnittrichtung</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_direction.quer">
+                <source>Cross-section</source>
+                <target>Querschnitt</target>
+            </trans-unit>
+            <trans-unit id="cutting_direction.cutdirection_quer">
+                <source>Cross-section</source>
+                <target>Querschnitt</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_direction.lang">
+                <source>Longitudinal section</source>
+                <target>Längsschnitt</target>
+            </trans-unit>
+            <trans-unit id="cutting_direction.cutdirection_lang">
+                <source>Longitudinal section</source>
+                <target>Längsschnitt</target>
+            </trans-unit>
+            <trans-unit id="product.images">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="product.document_brochure">
+                <source>Document Brochure</source>
+                <target>Prospekt</target>
+            </trans-unit>
+            <trans-unit id="product.storage_style">
+                <source>Type of storage system</source>
+                <target>Lagerart</target>
+            </trans-unit>
+            <trans-unit id="product.storage_type">
+                <source>Storage Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="product.model_series">
+                <source>Model Series</source>
+                <target>Baureihe</target>
+            </trans-unit>
+            <trans-unit id="product.application_area">
+                <source>Application Area</source>
+                <target>Anwendungsgebiet</target>
+            </trans-unit>
+            <trans-unit id="product.saw_type">
+                <source>Saw Type</source>
+                <target>Sägeart</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_options">
+                <source>Cutting Options</source>
+                <target>Schnittmöglichkeiten</target>
+            </trans-unit>
+            <trans-unit id="product.cutting_option">
+                <source>Cut</source>
+                <target>Schnittart</target>
+            </trans-unit>
+            <trans-unit id="product.cut_count">
+                <source>Average number</source>
+                <target>Schnittanzahl</target>
+            </trans-unit>
+            <trans-unit id="product.cut_width">
+                <source>Cut width</source>
+                <target>Schnittbreite/Durchlass</target>
+            </trans-unit>
+            <trans-unit id="product.cut_length">
+                <source>Cut length</source>
+                <target>Schnittlänge</target>
+            </trans-unit>
+            <trans-unit id="product.material">
+                <source>Material</source>
+                <target>Materialart</target>
+            </trans-unit>
+            <trans-unit id="product.material_width">
+                <source>Material width</source>
+                <target>max. Material-Breite</target>
+            </trans-unit>
+            <trans-unit id="product.material_height">
+                <source>Material height</source>
+                <target>max. Material-Höhe</target>
+            </trans-unit>
+            <trans-unit id="product.material_diameter">
+                <source>Diameter</source>
+                <target>Material-Durchmesser</target>
+            </trans-unit>
+            <trans-unit id="product.material_square">
+                <source>Square</source>
+                <target>Material-Vierkant</target>
+            </trans-unit>
+            <trans-unit id="product.saw_automation">
+                <source>Grade of automation</source>
+                <target>Automatisierung</target>
+            </trans-unit>
+            <trans-unit id="product.material_shaping">
+                <source>Material Shaping</source>
+                <target>Materialform</target>
+            </trans-unit>
+            <trans-unit id="product.system_name">
+                <source>System Name</source>
+                <source>Systemname</source>
+            </trans-unit>
+            <trans-unit id="product.type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="product.addons">
+                <source>Accessories</source>
+                <target>Zubehör</target>
+            </trans-unit>
+            <trans-unit id="product.saw_machines.addons">
+                <source>Accessories for this sawing machine</source>
+                <target>Zubehör zu dieser Säge</target>
+            </trans-unit>
+            <trans-unit id="product.services">
+                <source>Service &#38; Support options</source>
+                <target>Services &#38; Supportoptionen</target>
+            </trans-unit>
+            <trans-unit id="product.related_references">
+                <source>Related references</source>
+                <target>Verwandte Referenzen</target>
+            </trans-unit>
+            <trans-unit id="product.contact">
+                <source>Contact</source>
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="product.video_urls">
+                <source>Youtube video URLs</source>
+                <target>Youtube video URLs</target>
+            </trans-unit>
+            <trans-unit id="product.tables">
+                <source>Technical data</source>
+                <target>Technische Daten</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_type.title">
+                <source>Title</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue">
+                <source>Attribute Value</source>
+                <target>Attributwert</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.value">
+                <source>Value</source>
+                <target>Wert</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.attribute">
+                <source>Attribute</source>
+                <target>Attribut</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_reference">
+                <source>Reference</source>
+                <target>Referenz</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_url">
+                <source>URL</source>
+                <target>URL</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_url.value">
+                <source>Value</source>
+                <target>Wert</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_table">
+                <source>Table</source>
+                <target>Tabelle</target>
+            </trans-unit>
+            <trans-unit id="products.load_more">
+                <source>Load more</source>
+                <target>Laden Sie mehr</target>
+            </trans-unit>
+            <trans-unit id="products.more">
+                <source>More</source>
+                <target>Mehr</target>
+            </trans-unit>
+            <trans-unit id="products.not_found">
+                <source>Records were not found. Please try to change search parameters.</source>
+                <target>Aufzeichnungen wurden nicht gefunden. Bitte versuchen Sie, die Suchparameter zu ändern.</target>
+            </trans-unit>
+            <trans-unit id="products.section.gallery.zoom">
+                <source>Zoom</source>
+                <target>Zoom</target>
+            </trans-unit>
+            <trans-unit id="products.section.technical_data">
+                <source>Technical data</source>
+                <target>Technische Daten</target>
+            </trans-unit>
+            <trans-unit id="products.section.technical_data.table_policy">
+                <source>We reserve the right to make technical changes.</source>
+                <target>Technische Änderungen vorbehalten</target>
+            </trans-unit>
+
+            <!-- Buttons -->
+            <trans-unit id="products.section.buttons.download_data_sheet">
+                <source>Download data sheet</source>
+                <target>Download Datenblatt</target>
+            </trans-unit>
+            <trans-unit id="products.section.buttons.recommend">
+                <source>Recommend</source>
+                <target>Seite weiterempfehlen</target>
+            </trans-unit>
+            <trans-unit id="products.section.buttons.contact_consultant">
+                <source>Please contact consultant</source>
+                <target>Berater kontaktieren</target>
+            </trans-unit>
+
+            <!-- Detail back labels -->
+            <trans-unit id="back_to_list.type_">
+                <source>Back to sawing machines</source>
+                <target>Zurück zur Übersicht</target>
+            </trans-unit>
+            <trans-unit id="back_to_list.type_1">
+                <source>Back to sawing machines</source>
+                <target>Zurück zu Sägemaschinen</target>
+            </trans-unit>
+            <trans-unit id="back_to_list.type_2">
+                <source>Back to storage systems</source>
+                <target>Zurück zu Lagersystemen</target>
+            </trans-unit>
+            <trans-unit id="back_to_list.type_4">
+                <source>Back to services</source>
+                <target>Zurück zu Dienstleistungen</target>
+            </trans-unit>
+            <trans-unit id="back_to_list.type_6">
+                <source>Back to systems</source>
+                <target>Zurück zu den Systemen</target>
+            </trans-unit>
+
+            <trans-unit id="products.section.description.download_document_brochure">
+                <source>Download brochure</source>
+                <target>Prospekt-Download</target>
+            </trans-unit>
+
+            <!-- Filters -->
+            <trans-unit id="filter.criteria">
+                <source>Criteria</source>
+                <target>Kriterien filtern</target>
+            </trans-unit>
+            <trans-unit id="filter.dimensions">
+                <source>Dimensions</source>
+                <target>Abmessungen</target>
+            </trans-unit>
+            <trans-unit id="filter.clean.filters">
+                <source>Remove all filters</source>
+                <target>Alle Filter löschen</target>
+            </trans-unit>
+            <trans-unit id="filter.clean.subfilters">
+                <source>Clear subfilters</source>
+                <target>Subfilter löschen</target>
+            </trans-unit>
+            <trans-unit id="view.title">
+                <source>Title View</source>
+                <target>Listenansicht</target>
+            </trans-unit>
+            <trans-unit id="view.tile">
+                <source>Tile View</source>
+                <target>Kachelansicht</target>
+            </trans-unit>
+
+            <trans-unit id="section.addons.title">
+                <source>Accessories for this system</source>
+                <target>Zubehör für dieses System</target>
+            </trans-unit>
+            <trans-unit id="section.services.title">
+                <source>Services &#38; Support options</source>
+                <target>Services &#38; Supportoptionen</target>
+            </trans-unit>
+
+            <trans-unit id="section.contact.happy_to_help">
+                <source>We are happy to help</source>
+                <target>Wir beraten Sie gerne</target>
+            </trans-unit>
+            <trans-unit id="section.contact.tel">
+                <source>Phone</source>
+                <target>Tel</target>
+            </trans-unit>
+            <trans-unit id="section.contact.make_inquiry">
+                <source>Make an inquiry</source>
+                <target>Anfrage stellen</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

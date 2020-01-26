@@ -1,0 +1,34 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{product.services}">
+    <div class="section services-section bg-grey">
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <h1><f:translate id="section.services.title" /></h1>
+                </div>
+                <f:for each="{v:iterator.chunk(subject: product.services, count: 4)}" as="chunkItems">
+                    <div class="row">
+                        <f:for each="{chunkItems}" as="service">
+                            <div class="service-item teaser-item col-md-6 col-lg-3">
+                                <f:link.action action="detail"
+                                               pageUid="{settings.servicePID}"
+                                               arguments="{product: service}"
+                                               class="teaser-item"
+                                               target="_blank">
+                                    <div class="image-wrapper">
+                                        <v:media.exists file="{service.images.0.originalResource.publicUrl}">
+                                            <f:image image="{service.images.0}" maxWidth="320" />
+                                        </v:media.exists>
+                                    </div>
+                                    <div class="title h5">{service.title}</div>
+                                </f:link.action>
+                            </div>
+                        </f:for>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</f:if>
+</html>

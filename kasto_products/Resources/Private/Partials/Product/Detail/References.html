@@ -1,0 +1,19 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{product.relatedReferences}">
+    <div class="references-section">
+        <div class="container">
+            <f:for each="{product.relatedReferences}" as="reference" iteration="iterator">
+                <div class="reference-item {f:if(condition: '{iterator.cycle % 2}', then: 'right', else: 'left')}">
+                    <div class="text">
+                        <h2 class="h1">{reference.title}</h2>
+                        <f:format.html>{reference.bodytext}</f:format.html></div>
+                    <v:media.exists file="{reference.image.originalResource.publicUrl}">
+                        <f:image image="{reference.image}" maxWidth="480" />
+                    </v:media.exists>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</f:if>
+</html>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-05-31T21:17:35Z"
+          product-name="kasto_products">
+        <header/>
+        <body>
+            <trans-unit id="be_plugin.title">
+                <source>Product Area</source>
+                <target>Produktbereich</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product">
+                <source>Product</source>
+                <target>Produkt</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.title">
+                <source>Title</source>
+                <target>Name</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.alias">
+                <source>Alias</source>
+                <target>Alias</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.title_skip_cursive">
+                <source>Disable automatic italic</source>
+                <target>Automatische Kursivschreibung deaktivieren</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.is_used">
+                <source>Is Used</source>
+                <target>Gebrauchter Gegenstand</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.description_short">
+                <source>Description Short</source>
+                <target>Kurz-Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.description_long">
+                <source>Description Long</source>
+                <target>Lang-Beschreibung</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cutting_area">
+                <source>Cutting Area</source>
+                <target>Schnittbereich</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cut_length">
+                <source>Cut Length</source>
+                <target>Schnittlänge</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cut_width">
+                <source>Cut Width</source>
+                <target>Schnittbreite</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cutting_direction">
+                <source>Cutting Direction</source>
+                <target>Schnittrichtung</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.images">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.document_brochure">
+                <source>Document Brochure</source>
+                <target>Prospekt</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.storage_style">
+                <source>Storage Style</source>
+                <target>Speicherstil</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.storage_type">
+                <source>Storage Type</source>
+                <target>Speichertyp</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.model_series">
+                <source>Model Series</source>
+                <target>Modellreihen</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.application_area">
+                <source>Application Area (up to)</source>
+                <target>Anwendungsgebiet</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.saw_type">
+                <source>Saw Type</source>
+                <target>Sägeart</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cutting_option">
+                <source>Cutting Options</source>
+                <target>Schnittmöglichkeiten</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.cut_count">
+                <source>Cut Count</source>
+                <target>Schnittanzahl</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material">
+                <source>Material</source>
+                <target>Materialart</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material_width">
+                <source>Material Width</source>
+                <target>max Material-Breite</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material_height">
+                <source>Material Height</source>
+                <target>max Material-Höhe</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material_diameter">
+                <source>Material Diameter</source>
+                <target>max Material-Durchmesser</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material_square">
+                <source>Material Square</source>
+                <target>max Material-Vierkant</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.saw_automation">
+                <source>Saw Automation</source>
+                <target>Automatisierung</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.material_shaping">
+                <source>Material Shaping</source>
+                <target>Materialform</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.round_full">
+                <source>round full</source>
+                <target>rund voll</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.flat_full_w_h">
+                <source>flat full (BxH)</source>
+                <target>flach voll (BxH)</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.square_shaped">
+                <source>square shaped</source>
+                <target>vierkant voll</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.round_tube">
+                <source>round tube</source>
+                <target>rund rohr</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.flat_tube_w_h">
+                <source>flat tube (BxH)</source>
+                <target>flach rohr (BxH)</target>
+            </trans-unit>
+            <trans-unit id="material_shaping.square_tube">
+                <source>square tube</source>
+                <target>vierkant rohr</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.system_name">
+                <source>System Name</source>
+                <target>Systemname</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.addons">
+                <source>Addons</source>
+                <target>Zubehör</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.services">
+                <source>Services</source>
+                <target>Service &#38; Support</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.related_references">
+                <source>Related References</source>
+                <target>Referenzen</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.contact">
+                <source>Contact</source>
+                <target>Ansprechparter</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.video_urls">
+                <source>Video Urls</source>
+                <target>Videos</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.tables">
+                <source>Technical data</source>
+                <target>Technische Daten</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_type.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue">
+                <source>Attribute Value</source>
+                <target>Attributwert</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.value">
+                <source>Value</source>
+                <target>Wert</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.attribute">
+                <source>Attribute</source>
+                <target>Attribut</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_attributevalue.type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_reference">
+                <source>Reference</source>
+                <target>Referenz</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_url">
+                <source>Url</source>
+                <target>Video URL</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_url.value">
+                <source>Youtube video ID</source>
+                <target>Youtube video ID</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_table">
+                <source>Table</source>
+                <target>Tabelle</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.variant">
+                <source>Variant</source>
+                <target>Option</target>
+            </trans-unit>
+            <trans-unit id="label.please_select">
+                <source>Please select ...</source>
+                <target>Bitte auswählen ...</target>
+            </trans-unit>
+            <trans-unit id="label.cutdirection_quer">
+                <source>Cross-section</source>
+                <target>Querschnitt</target>
+            </trans-unit>
+            <trans-unit id="label.cutdirection_lang">
+                <source>Longitudinal section</source>
+                <target>Längsschnitt</target>
+            </trans-unit>
+            <trans-unit id="label.default_language">
+                <source>Default (German)</source>
+                <target>Default (Deutsch)</target>
+            </trans-unit>
+            <trans-unit id="label.sheet.general">
+                <source>Product Description</source>
+                <target>Produktbeschreibung</target>
+            </trans-unit>
+            <trans-unit id="label.sheet.data">
+                <source>Product Data</source>
+                <target>Produktdaten</target>
+            </trans-unit>
+            <trans-unit id="label.sheet.media">
+                <source>Product Media</source>
+                <target>Media Daten</target>
+            </trans-unit>
+            <trans-unit id="label.sheet.addons_services">
+                <source>Addon/Service</source>
+                <target>Zubehör / Service &#38; Support</target>
+            </trans-unit>
+            <trans-unit id="label.sheet.references_contact">
+                <source>Reference/Contact</source>
+                <target>Referenzen/Kontakt</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_product.contact">
+                <source>Contact person</source>
+                <target>Ansprechpartner</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_table.header">
+                <source>Header</source>
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_table.structure">
+                <source>Structure</source>
+                <target>Tabelle</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_reference.title">
+                <source>Title</source>
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_reference.bodytext">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="tx_kastoproducts_domain_model_reference.image">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>
